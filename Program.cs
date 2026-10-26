@@ -39,21 +39,47 @@
 
 
             #region AppDbContext
-//            using Microsoft.EntityFrameworkCore;
+            //            using Microsoft.EntityFrameworkCore;
 
-//public class BookstoreDbContext : DbContext
+            //public class BookstoreDbContext : DbContext
+            //        {
+            //            public DbSet<Book> Books { get; set; }
+            //            public DbSet<Author> Authors { get; set; }
+            //            public DbSet<Category> Categories { get; set; }
+
+            //            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+            //            {
+            //                // استبدل ضع اسم السيرفر الخاص بك هنا (Server Name)
+            //                optionsBuilder.UseSqlServer("Server=.;Database=ReadMoreBooksDb;Trusted_Connection=True;TrustServerCertificate=True;");
+            //            }
+            //        }
+            #endregion
+
+
+            #region Program
+//            using System;
+
+//class Program
 //        {
-//            public DbSet<Book> Books { get; set; }
-//            public DbSet<Author> Authors { get; set; }
-//            public DbSet<Category> Categories { get; set; }
-
-//            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+//            static void Main(string[] args)
 //            {
-//                // استبدل ضع اسم السيرفر الخاص بك هنا (Server Name)
-//                optionsBuilder.UseSqlServer("Server=.;Database=ReadMoreBooksDb;Trusted_Connection=True;TrustServerCertificate=True;");
+//                using var context = new BookstoreDbContext();
+
+
+//                bool created = context.Database.EnsureCreated();
+
+//                if (created)
+//                {
+//                    Console.WriteLine("Database 'ReadMoreBooksDb' has been created successfully using EF Core Conventions!");
+//                }
+//                else
+//                {
+//                    Console.WriteLine("Database already exists.");
+//                }
 //            }
 //        }
             #endregion
+
     }
 }
 }
